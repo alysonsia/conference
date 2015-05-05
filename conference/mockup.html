@@ -1,0 +1,198 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ascott Conference</title>
+	
+	<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="mockup.css" />
+	<script src="jquery-1.11.1.min.js"></script>
+	<script src="jquery.mobile-1.4.5.min.js"></script>
+    <script src="mockup.js"></script>
+	<style>
+	img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+	</style>
+</head>
+
+<body>
+<div data-role="page" id="speaker-page" data-theme="d" data-url="speaker-page">
+    <div data-role="header" data-theme="b">
+        <h1>Speakers</h1>
+        <a href="#left-panel" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
+        <!--a href="#right-panel" data-theme="d" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open right panel</a -->
+    </div><!-- /header -->
+    <div data-role="content"  data-theme="f">
+		<div class="content-primary">	
+		<ul data-role="listview">
+			<li><a href="index.html">
+				<img src="images/speaker1.jpg" />
+				<h3>Earl Jon De Castro</h3>
+				<p><i>Director</i></p>
+				<p>Ascott</p>
+			</a></li>
+			<li><a href="index.html">
+				<img src="images/speaker2.jpg" />
+				<h3>Charles Christopher Dolera</h3>
+				<p><i>Director</i></p>
+				<p>GojiBerry Technologies</p>
+			</a></li>
+			<li><a href="index.html">
+				<img src="images/speaker3.jpg" />
+				<h3>Jason Sia</h3>
+				<p><i>Director</i></p>
+				<p>One Billion Apps</p>
+			</a></li>
+		</ul>
+        </div>		
+	</div><!-- /content -->
+    <div data-role="footer" data-theme="b" data-position="fixed" width="100%">
+				<img src="images/banner.png" />
+    </div><!-- /header -->
+	
+    <div data-role="panel" id="left-panel" data-theme="b" data-display='overlay'>
+		<ul data-role="listview">
+			<li data-rel="close"><a href="#speaker-page"><img src="images/icon_spkr.png" alt="Speakers" class="ui-li-icon">Speakers <!--span class="ui-li-count">4</span--></a></li>
+			<li data-rel="close"><a href="#partner-page"><img src="images/icon_partner.png" alt="Partners" class="ui-li-icon">Partners <!--span class="ui-li-count">4</span--></a></li>
+			<li data-rel="close"><a href="#map-page"><img src="images/icon_map.png" alt="Map" class="ui-li-icon">Map <!--span class="ui-li-count">0</span --></a></li>
+			<li data-rel="close"><a href="#schedule-page"><img src="images/icon_schedule.png" alt="Schedule" class="ui-li-icon">Schedule <!--span class="ui-li-count">12</span --></a></li>
+		</ul>    
+	</div><!-- /panel -->
+</div>	
+<div data-role="page" id="partner-page" data-theme="d" data-url="partner-page">
+    <div data-role="header" data-theme="b">
+        <h1>Partners</h1>
+        <a href="#left-panel2" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
+        <!--a href="#right-panel" data-theme="d" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open right panel</a -->
+    </div><!-- /header -->
+    <div data-role="content"  data-theme="f">
+		<div class="content-primary">	
+		<ul data-role="listview">
+			<li><a href="index.html">
+				<img src="images/the-ascott-hotel-logo.gif" />
+				<h3>Ascott</h3>
+			</a></li>
+			<li><a href="index.html">
+				<img src="images/gojisplash.png" />
+				<h3>GojiBerry Technologies</h3>
+			</a></li>
+			<li><a href="index.html">
+				<img src="images/1bn.png" />
+				<h3>One Billion Apps</h3>
+			</a></li>
+		</ul>
+        </div>		
+	</div><!-- /content -->
+    <div data-role="footer" data-theme="b" data-position="fixed" width="100%">
+				<img src="images/banner.png" />
+    </div><!-- /header -->
+    <div data-role="panel" id="left-panel2" data-theme="b" data-display='overlay'>
+		<ul data-role="listview">
+			<li data-rel="close"><a href="#speaker-page"><img src="images/icon_spkr.png" alt="Speakers" class="ui-li-icon">Speakers <!--span class="ui-li-count">4</span--></a></li>
+			<li data-rel="close"><a href="#partner-page"><img src="images/icon_partner.png" alt="Partners" class="ui-li-icon">Partners <!--span class="ui-li-count">4</span--></a></li>
+			<li data-rel="close"><a href="#map-page"><img src="images/icon_map.png" alt="Map" class="ui-li-icon">Map <!--span class="ui-li-count">0</span --></a></li>
+			<li data-rel="close"><a href="#schedule-page"><img src="images/icon_schedule.png" alt="Schedule" class="ui-li-icon">Schedule <!--span class="ui-li-count">12</span --></a></li>
+		</ul>    
+	</div><!-- /panel -->
+</div>	
+<div data-role="page" id="map-page" data-theme="d" data-url="map-page">
+    <div data-role="header" data-theme="b">
+        <h1>Map</h1>
+        <a href="#left-panel3" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
+        <!--a href="#right-panel" data-theme="d" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open right panel</a -->
+    </div><!-- /header -->
+    <div data-role="content">
+		<img src="images/floorplan.gif" />
+		<p></p>
+		<img src="images/floorplan2.jpg" />
+    </div><!-- /content -->
+    <div data-role="footer" data-theme="b" data-position="fixed" width="100%">
+				<img src="images/banner.png" />
+    </div><!-- /header -->
+    <div data-role="panel" id="left-panel3" data-theme="b" data-display='overlay'>
+		<ul data-role="listview">
+			<li data-rel="close"><a href="#speaker-page"><img src="images/icon_spkr.png" alt="Speakers" class="ui-li-icon">Speakers <!--span class="ui-li-count">4</span--></a></li>
+			<li data-rel="close"><a href="#partner-page"><img src="images/icon_partner.png" alt="Partners" class="ui-li-icon">Partners <!--span class="ui-li-count">4</span--></a></li>
+			<li data-rel="close"><a href="#map-page"><img src="images/icon_map.png" alt="Map" class="ui-li-icon">Map <!--span class="ui-li-count">0</span --></a></li>
+			<li data-rel="close"><a href="#schedule-page"><img src="images/icon_schedule.png" alt="Schedule" class="ui-li-icon">Schedule <!--span class="ui-li-count">12</span --></a></li>
+		</ul>    
+	</div><!-- /panel -->
+</div>	
+<div data-role="page" id="schedule-page" data-theme="d" data-url="schedule-page">
+    <div data-role="header" data-theme="b">
+        <h1>Schedule</h1>
+        <a href="#left-panel4" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
+        <!--a href="#right-panel" data-theme="d" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open right panel</a -->
+    </div><!-- /header -->
+    <div data-role="content">
+		<div data-role="tabs" id="tabs">
+		  <div data-role="navbar">
+			<ul>
+			  <li><a href="#one" data-ajax="false">Main Event</a></li>
+			  <li><a href="#two" data-ajax="false">Breakout Sessions</a></li>
+			</ul>
+		  </div>
+		  <div id="mainevent" class="ui-body-d ui-content">
+			<ul data-role="listview">
+				<li>
+				  <a href="index.html">
+					<h3>Registration and Light Snacks</h3>
+  				    <p>
+						<img src="images/clock.png" /> 09:00 am - 09:30am
+					</p>
+				   </a>
+				</li>
+				<li>
+				  <a href="index.html">
+					<h3>Welcome Remarks by Juan de la Cruz</h3>
+  				    <p>
+						<img src="images/clock.png" /> 09:30 am - 10:00am
+					</p>
+				   </a>
+				</li>
+			</ul>
+		  </div>
+		  <div id="breakout">
+			<ul data-role="listview">
+				<li>
+				  <a href="index.html">
+					<h3>Registration and Light Snacks</h3>
+  				    <p>
+						<img src="images/clock.png" /> 09:00 am - 09:30am
+					</p>
+				   </a>
+				</li>
+				<li>
+				  <a href="index.html">
+					<h3>Welcome Remarks by Juan de la Cruz</h3>
+  				    <p>
+						<img src="images/clock.png" /> 09:30 am - 10:00am
+					</p>
+				   </a>
+				</li>
+			</ul>
+		  </div>
+		</div>
+    </div><!-- /content -->
+    <div data-role="footer" data-theme="b" data-position="fixed" width="100%">
+				<img src="images/banner.png" />
+    </div><!-- /header -->
+    <div data-role="panel" id="left-panel4" data-theme="b" data-display='overlay'>
+		<ul data-role="listview">
+			<li data-rel="close"><a href="#speaker-page"><img src="images/icon_spkr.png" alt="Speakers" class="ui-li-icon">Speakers <!--span class="ui-li-count">4</span--></a></li>
+			<li data-rel="close"><a href="#partner-page"><img src="images/icon_partner.png" alt="Partners" class="ui-li-icon">Partners <!--span class="ui-li-count">4</span--></a></li>
+			<li data-rel="close"><a href="#map-page"><img src="images/icon_map.png" alt="Map" class="ui-li-icon">Map <!--span class="ui-li-count">0</span --></a></li>
+			<li data-rel="close"><a href="#schedule-page"><img src="images/icon_schedule.png" alt="Schedule" class="ui-li-icon">Schedule <!--span class="ui-li-count">12</span --></a></li>
+		</ul>    
+	</div><!-- /panel -->
+</div>	
+
+
+
+</body>
+
+</html>

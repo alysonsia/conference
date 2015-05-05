@@ -1,0 +1,348 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ascott Conference</title>
+	
+	<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="mockup.css" />
+	<script src="jquery-1.11.1.min.js"></script>
+	<script src="jquery.mobile-1.4.5.min.js"></script>
+    <script src="mockup.js"></script>
+	<style>
+	img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+	</style>
+</head>
+
+<body>
+<div data-role="page" id="login-page" data-theme="d" data-url="login-page">
+    <div data-role="header" data-theme="b">
+        <h1>Sign-In</h1>
+    </div><!-- /header -->
+    <div data-role="content"  data-theme="f">
+		<img src="images/gojisplash.png" style="position: relative; left: 50%; margin-left: -106px;" />
+		<label for="txt-email">Email Address</label>
+		<input type="text" name="txt-email" id="txt-email" value="info@gojiberrytech.com">
+		<label for="txt-password">Conference Code</label>
+		<input type="password" name="txt-password" id="txt-password" value="12345678">
+		<a href="#dlg-invalid-credentials" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>
+        <i><div id="login-status" align="right"></div></i>
+	</div>
+</div>	
+	
+<div data-role="page" id="speaker-page" data-theme="d" data-url="speaker-page">
+    <div data-role="header" data-theme="b" data-position="fixed" >
+        <h1>Speakers</h1>
+        <a href="#left-panel" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="">Open left panel</a>
+        <!--a href="#right-panel" data-theme="d" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open right panel</a -->
+    </div><!-- /header -->
+    <div data-role="content"  data-theme="a">
+		<div class="content-primary">	
+		<ul id="speaker-list" data-role="listview"  data-filter="true">
+		</ul>
+        </div>		
+	</div><!-- /content -->
+    <div data-role="footer" data-theme="b" data-position="fixed" width="100%">
+				<img src="images/banner.png" />
+    </div><!-- /header -->
+	
+    <div data-role="panel" id="left-panel" data-theme="b" data-display='overlay'>
+        <ul data-role="listview">
+            <li data-rel="close" data-icon="user"><a href="#speaker-page"><!-- img src="images/icon_spkr.png" alt="Speakers" class="ui-li-icon" -->Speakers <!--span class="ui-li-count">4</span--></a></li>
+            <li data-rel="close" data-icon="heart"><a href="#partner-page"><!-- img src="images/icon_partner.png" alt="Partners" class="ui-li-icon" -->Partners <!--span class="ui-li-count">4</span--></a></li>
+            <li data-rel="close" data-icon="location"><a href="#map-page"><!-- img src="images/icon_map.png" alt="Map" class="ui-li-icon"-->Map <!--span class="ui-li-count">0</span --></a></li>
+            <li data-rel="close" data-icon="calendar"><a href="#schedule-page"><!-- img src="images/icon_schedule.png" alt="Schedule" class="ui-li-icon" -->Schedule <!--span class="ui-li-count">12</span --></a></li>
+            <li data-rel="close" data-icon="clock"><a href="#my-schedule-page">My Schedule <!--span class="ui-li-count">12</span --></a></li>
+            <li data-rel="close" data-icon="info"><a href="#about-page">About <!--span class="ui-li-count">12</span --></a></li>
+        </ul>   
+    </div><!-- /panel -->
+    
+</div>
+
+<div data-role="page" id="speaker-profile-page" data-theme="d" data-url="speaker-profile-page">
+    <div data-role="header" data-theme="b" data-position="fixed" >
+        <!--a data-rel="back"  data-icon="back" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc"></a -->
+        <h1>Profile</h1>
+        <a href="#" data-theme="d" data-rel="back" data-icon="back" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Speakers</a>
+        
+    </div><!-- /header -->
+    <div data-role="content"  data-theme="a" id="speaker-profile-content">
+        <!-- table  class="ui-responsive">
+          <tbody>
+            <tr>
+              <td>
+				<img src="images/speaker1.jpg" />
+              </td>
+              <td>
+                <h3>Alan Pettigrew</h3>
+                <p>Chief of Technology</p>
+                <p>Citrix Systems</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Profile</h3><hr >
+        <p>An industry veteran of 18 years in conceptualizing, innovating, designing, architecting, planning, integrating, implementing, managing and supporting numerous IT systems and networks across the globe, that bring tremendous savings and generate millions of dollars in revenue to companies. \nRoseller has the knack for cutting-edge, open systems technologies and fusing them together to create high value-added products and services that yield high gains. He possesses skills that include not only technical, but also business and financial, people and negotiation.  He holds a B.S. In Computer Engineering degree from AMA Computer University and PRINCE2 and ITILv3 Foundation certifications.</p>
+        <h3>Sessions</h3><hr >
+        <table  class="ui-responsive">
+          <tbody>
+            <tr>
+              <h4>Mobile Workplace Solutions</h4>
+            </tr>
+            <tr>
+              <td><a data-theme="b" href="#" data-role="button" data-icon="calendar" data-iconpos="notext" class="ui-icon-nodisc" data-shadow="false" data-iconshadow="false"></a></td>
+              <td><p>11-05-2015</p></td>
+            </tr>
+            <tr>
+              <td>
+                <a data-theme="b" href="#" data-role="button" data-icon="clock" data-iconpos="notext" class="ui-icon-nodisc" data-shadow="false" data-iconshadow="false"></a>              </td>
+              <td>
+                02:15 pm - 03:00 pm
+              </td>
+              <td>
+                <a data-theme="b" href="#" data-role="button" data-icon="location" data-iconpos="notext" class="ui-icon-nodisc" data-shadow="false" data-iconshadow="false"></a>
+              </td>
+              <td>
+                <p>Mactan 1 Function Room</p>
+              </td>
+            </tr>
+          </tbody>
+        </table -->
+        
+	</div><!-- /content -->
+    <div data-role="footer" data-theme="b" data-position="fixed" width="100%">
+    </div><!-- /header -->
+    
+    <div data-role="panel" id="speaker-profile-panel" data-theme="b" data-display='overlay'>
+        <ul data-role="listview">
+            <li data-rel="close" data-icon="user"><a href="#speaker-page"><!-- img src="images/icon_spkr.png" alt="Speakers" class="ui-li-icon" -->Speakers <!--span class="ui-li-count">4</span--></a></li>
+            <li data-rel="close" data-icon="heart"><a href="#partner-page"><!-- img src="images/icon_partner.png" alt="Partners" class="ui-li-icon" -->Partners <!--span class="ui-li-count">4</span--></a></li>
+            <li data-rel="close" data-icon="location"><a href="#map-page"><!-- img src="images/icon_map.png" alt="Map" class="ui-li-icon"-->Map <!--span class="ui-li-count">0</span --></a></li>
+            <li data-rel="close" data-icon="calendar"><a href="#schedule-page"><!-- img src="images/icon_schedule.png" alt="Schedule" class="ui-li-icon" -->Schedule <!--span class="ui-li-count">12</span --></a></li>
+            <li data-rel="close" data-icon="clock"><a href="#my-schedule-page">My Schedule <!--span class="ui-li-count">12</span --></a></li>
+            <li data-rel="close" data-icon="info"><a href="#about-page">About <!--span class="ui-li-count">12</span --></a></li>
+        </ul>   
+    </div><!-- /panel -->
+    
+</div>
+
+<div data-role="page" id="speaker-session-page" data-theme="d" data-url="speaker-session-page">
+    <div data-role="header" data-theme="b" data-position="fixed" >
+        <!--a data-rel="back"  data-icon="back" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc"></a -->
+        <h1>Topic</h1>
+        <a href="#" data-theme="d" data-rel="back" data-icon="back" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Profile</a>
+        
+    </div><!-- /header -->
+    <div data-role="content"  data-theme="a" id="speaker-profile-content">
+        <h4>INSPIRING CORPORATE CULTURE</h4>
+        <h3>Mobile Workplace Solutions</h3>
+        <table  class="ui-responsive">
+          <tbody>
+            <tr>
+              <td><a data-theme="b" href="#" data-role="button" data-icon="calendar" data-iconpos="notext" class="ui-icon-nodisc" data-shadow="false" data-iconshadow="false"></a></td>
+              <td><p>11-05-2015</p></td>
+            </tr>
+            <tr>
+              <td>
+                <a data-theme="b" href="#" data-role="button" data-icon="clock" data-iconpos="notext" class="ui-icon-nodisc" data-shadow="false" data-iconshadow="false"></a>              </td>
+              <td>
+                02:15 pm - 03:00 pm
+              </td>
+              <td>
+                <a data-theme="b" href="#" data-role="button" data-icon="location" data-iconpos="notext" class="ui-icon-nodisc" data-shadow="false" data-iconshadow="false"></a>
+              </td>
+              <td>
+                <p>Mactan 1 Function Room</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Consumers have gone digital.  Your staff has gone digital.  Your stakeholders have gone digital.  Even you have gone digital.</p>
+        <h4>Speaker</h4><hr >
+        <table  class="ui-responsive">
+          <tbody>
+            <tr>
+              <td>
+				<img src="images/speaker1.jpg" />
+              </td>
+              <td>
+                <h3>Alan Pettigrew</h3>
+                <p>Chief of Technology</p>
+                <p>Citrix Systems</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <!-- table  class="ui-responsive">
+          <tbody>
+            <tr>
+              <td>
+				<img src="images/speaker1.jpg" />
+              </td>
+              <td>
+                <h3>Alan Pettigrew</h3>
+                <p>Chief of Technology</p>
+                <p>Citrix Systems</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Profile</h3><hr >
+        <p>An industry veteran of 18 years in conceptualizing, innovating, designing, architecting, planning, integrating, implementing, managing and supporting numerous IT systems and networks across the globe, that bring tremendous savings and generate millions of dollars in revenue to companies. \nRoseller has the knack for cutting-edge, open systems technologies and fusing them together to create high value-added products and services that yield high gains. He possesses skills that include not only technical, but also business and financial, people and negotiation.  He holds a B.S. In Computer Engineering degree from AMA Computer University and PRINCE2 and ITILv3 Foundation certifications.</p>
+        <h3>Sessions</h3><hr >
+        <table  class="ui-responsive">
+          <tbody>
+            <tr>
+              <h4>Mobile Workplace Solutions</h4>
+            </tr>
+            <tr>
+              <td><a data-theme="b" href="#" data-role="button" data-icon="calendar" data-iconpos="notext" class="ui-icon-nodisc" data-shadow="false" data-iconshadow="false"></a></td>
+              <td><p>11-05-2015</p></td>
+            </tr>
+            <tr>
+              <td>
+                <a data-theme="b" href="#" data-role="button" data-icon="clock" data-iconpos="notext" class="ui-icon-nodisc" data-shadow="false" data-iconshadow="false"></a>              </td>
+              <td>
+                02:15 pm - 03:00 pm
+              </td>
+              <td>
+                <a data-theme="b" href="#" data-role="button" data-icon="location" data-iconpos="notext" class="ui-icon-nodisc" data-shadow="false" data-iconshadow="false"></a>
+              </td>
+              <td>
+                <p>Mactan 1 Function Room</p>
+              </td>
+            </tr>
+          </tbody>
+        </table -->
+        
+	</div><!-- /content -->
+    <div data-role="footer" data-theme="b" data-position="fixed" width="100%">
+    </div>
+</div>
+
+<div data-role="page" id="partner-page" data-theme="d" data-url="partner-page">
+    <div data-role="header" data-theme="b">
+        <h1>Partners</h1>
+        <a href="#left-panel2" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
+        <!--a href="#right-panel" data-theme="d" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open right panel</a -->
+    </div><!-- /header -->
+    <div data-role="content"  data-theme="f">
+		<div class="content-primary">	
+		<ul data-role="listview">
+			<li><a href="index.html">
+				<img src="images/the-ascott-hotel-logo.gif" />
+				<h3>Ascott</h3>
+			</a></li>
+			<li><a href="index.html">
+				<img src="images/gojisplash.png" />
+				<h3>GojiBerry Technologies</h3>
+			</a></li>
+			<li><a href="index.html">
+				<img src="images/1bn.png" />
+				<h3>One Billion Apps</h3>
+			</a></li>
+		</ul>
+        </div>		
+	</div><!-- /content -->
+    <div data-role="footer" data-theme="b" data-position="fixed" width="100%">
+				<img src="images/banner.png" />
+    </div><!-- /header -->
+    <div data-role="panel" id="left-panel2" data-theme="b" data-display='overlay'>
+		<ul data-role="listview">
+			<li data-rel="close"><a href="#speaker-page"><img src="images/icon_spkr.png" alt="Speakers" class="ui-li-icon">Speakers <!--span class="ui-li-count">4</span--></a></li>
+			<li data-rel="close"><a href="#partner-page"><img src="images/icon_partner.png" alt="Partners" class="ui-li-icon">Partners <!--span class="ui-li-count">4</span--></a></li>
+			<li data-rel="close"><a href="#map-page"><img src="images/icon_map.png" alt="Map" class="ui-li-icon">Map <!--span class="ui-li-count">0</span --></a></li>
+			<li data-rel="close"><a href="#schedule-page"><img src="images/icon_schedule.png" alt="Schedule" class="ui-li-icon">Schedule <!--span class="ui-li-count">12</span --></a></li>
+		</ul>    
+	</div><!-- /panel -->
+</div>	
+<div data-role="page" id="map-page" data-theme="d" data-url="map-page">
+    <div data-role="header" data-theme="b">
+        <h1>Map</h1>
+        <a href="#left-panel3" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
+        <!--a href="#right-panel" data-theme="d" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open right panel</a -->
+    </div><!-- /header -->
+    <div data-role="content">
+		<img src="images/floorplan.gif" />
+		<p></p>
+		<img src="images/floorplan2.jpg" />
+    </div><!-- /content -->
+    <div data-role="footer" data-theme="b" data-position="fixed" width="100%">
+				<img src="images/banner.png" />
+    </div><!-- /header -->
+    <div data-role="panel" id="left-panel3" data-theme="b" data-display='overlay'>
+		<ul data-role="listview">
+			<li data-rel="close"><a href="#speaker-page"><img src="images/icon_spkr.png" alt="Speakers" class="ui-li-icon">Speakers <!--span class="ui-li-count">4</span--></a></li>
+			<li data-rel="close"><a href="#partner-page"><img src="images/icon_partner.png" alt="Partners" class="ui-li-icon">Partners <!--span class="ui-li-count">4</span--></a></li>
+			<li data-rel="close"><a href="#map-page"><img src="images/icon_map.png" alt="Map" class="ui-li-icon">Map <!--span class="ui-li-count">0</span --></a></li>
+			<li data-rel="close"><a href="#schedule-page"><img src="images/icon_schedule.png" alt="Schedule" class="ui-li-icon">Schedule <!--span class="ui-li-count">12</span --></a></li>
+		</ul>    
+	</div><!-- /panel -->
+</div>	
+<div data-role="page" id="schedule-page" data-theme="d" data-url="schedule-page">
+    <div data-role="header" data-theme="b">
+        <h1>Schedule</h1>
+        <a href="#left-panel4" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
+        <!--a href="#right-panel" data-theme="d" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open right panel</a -->
+    </div><!-- /header -->
+    <div data-role="content">
+		<div data-role="tabs" id="tabs">
+		  <div data-role="navbar">
+			<ul>
+			  <li><a href="#mainevent" data-ajax="false">Main Event</a></li>
+			  <li><a href="#breakout" data-ajax="false">Breakout Sessions</a></li>
+			</ul>
+		  </div>
+		  <div id="mainevent" class="ui-body-d ui-content">
+			<ul data-role="listview">
+				<li>
+				  <a href="index.html">
+					<h3>Registration and Light Snacks</h3>
+  				    <p>
+						<img src="images/clock.png" /> 09:00 am - 09:30am
+					</p>
+				   </a>
+				</li>
+				<li>
+				  <a href="index.html">
+					<h3>Welcome Remarks by Juan de la Cruz</h3>
+  				    <p>
+						<img src="images/clock.png" /> 09:30 am - 10:00am
+					</p>
+				   </a>
+				</li>
+			</ul>
+		  </div>
+		  <div id="breakout" class="ui-body-d ui-content">
+     			<ul data-role="breakout" data-inset="true">
+					<li><a href="#">Session 1</a></li>
+					<li><a href="#">Session 2</a></li>
+				</ul>
+		   </div>		
+		</div>
+    </div><!-- /content -->
+    <div data-role="footer" data-theme="b" data-position="fixed" width="100%">
+				<img src="images/banner.png" />
+    </div><!-- /header -->
+    <div data-role="panel" id="left-panel4" data-theme="b" data-display='overlay'>
+		<ul data-role="listview">
+			<li data-rel="close"><a href="#speaker-page"><img src="images/icon_spkr.png" alt="Speakers" class="ui-li-icon">Speakers <!--span class="ui-li-count">4</span--></a></li>
+			<li data-rel="close"><a href="#partner-page"><img src="images/icon_partner.png" alt="Partners" class="ui-li-icon">Partners <!--span class="ui-li-count">4</span--></a></li>
+			<li data-rel="close"><a href="#map-page"><img src="images/icon_map.png" alt="Map" class="ui-li-icon">Map <!--span class="ui-li-count">0</span --></a></li>
+			<li data-rel="close"><a href="#schedule-page"><img src="images/icon_schedule.png" alt="Schedule" class="ui-li-icon">Schedule <!--span class="ui-li-count">12</span --></a></li>
+		</ul>    
+	</div><!-- /panel -->
+</div>	
+
+
+
+</body>
+
+</html>
